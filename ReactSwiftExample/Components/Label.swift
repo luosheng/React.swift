@@ -9,8 +9,7 @@
 import UIKit
 import ReactSwift
 
-struct LabelState : StateType {
-}
+struct LabelState : StateType { }
 
 struct LabelProperty : PropertyType {
     let text: String
