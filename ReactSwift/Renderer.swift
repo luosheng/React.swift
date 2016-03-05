@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct Renderer {
+public struct Renderer {
     
-    static func render<S: StateType, P: PropertyType>(component: BaseComponent<S, P>, hostView: UIView, frame: CGRect) {
+    public static func render<S: StateType, P: PropertyType>(component: BaseComponent<S, P>, hostView: UIView, frame: CGRect) {
         component.hostView = hostView
         component.frame = frame
         component.install()
