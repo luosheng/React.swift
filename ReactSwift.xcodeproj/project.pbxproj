@@ -13,13 +13,14 @@
 		B3475E171C8B1BE80029F255 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3475E161C8B1BE80029F255 /* Component.swift */; };
 		B3475E191C8B1DB90029F255 /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3475E181C8B1DB90029F255 /* Renderable.swift */; };
 		B3475E1B1C8B1E5F0029F255 /* LifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3475E1A1C8B1E5F0029F255 /* LifeCycle.swift */; };
-		B3475E1F1C8B24E10029F255 /* React.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3475E1E1C8B24E10029F255 /* React.swift */; };
+		B3475E1F1C8B24E10029F255 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3475E1E1C8B24E10029F255 /* Renderer.swift */; };
 		B3475E291C8B2BDB0029F255 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3475E281C8B2BDB0029F255 /* AppDelegate.swift */; };
 		B3475E2B1C8B2BDB0029F255 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3475E2A1C8B2BDB0029F255 /* ViewController.swift */; };
 		B3475E2E1C8B2BDB0029F255 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3475E2C1C8B2BDB0029F255 /* Main.storyboard */; };
 		B3475E301C8B2BDB0029F255 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3475E2F1C8B2BDB0029F255 /* Assets.xcassets */; };
 		B3475E331C8B2BDB0029F255 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3475E311C8B2BDB0029F255 /* LaunchScreen.storyboard */; };
 		B3475E381C8B2BE70029F255 /* ReactSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3475E051C8B18F40029F255 /* ReactSwift.framework */; };
+		B3475E3A1C8B2C270029F255 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3475E391C8B2C270029F255 /* Label.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +32,7 @@
 		B3475E161C8B1BE80029F255 /* Component.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
 		B3475E181C8B1DB90029F255 /* Renderable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderable.swift; sourceTree = "<group>"; };
 		B3475E1A1C8B1E5F0029F255 /* LifeCycle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeCycle.swift; sourceTree = "<group>"; };
-		B3475E1E1C8B24E10029F255 /* React.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = React.swift; sourceTree = "<group>"; };
+		B3475E1E1C8B24E10029F255 /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		B3475E261C8B2BDB0029F255 /* ReactSwiftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactSwiftExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3475E281C8B2BDB0029F255 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3475E2A1C8B2BDB0029F255 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +40,7 @@
 		B3475E2F1C8B2BDB0029F255 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3475E321C8B2BDB0029F255 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3475E341C8B2BDB0029F255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3475E391C8B2C270029F255 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Label.swift; path = Components/Label.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +89,7 @@
 				B3475E181C8B1DB90029F255 /* Renderable.swift */,
 				B3475E1A1C8B1E5F0029F255 /* LifeCycle.swift */,
 				B3475E161C8B1BE80029F255 /* Component.swift */,
-				B3475E1E1C8B24E10029F255 /* React.swift */,
+				B3475E1E1C8B24E10029F255 /* Renderer.swift */,
 				B3475E0A1C8B18F40029F255 /* Info.plist */,
 			);
 			path = ReactSwift;
@@ -96,6 +98,7 @@
 		B3475E271C8B2BDB0029F255 /* ReactSwiftExample */ = {
 			isa = PBXGroup;
 			children = (
+				B3475E3B1C8B2C2B0029F255 /* Components */,
 				B3475E281C8B2BDB0029F255 /* AppDelegate.swift */,
 				B3475E2A1C8B2BDB0029F255 /* ViewController.swift */,
 				B3475E2C1C8B2BDB0029F255 /* Main.storyboard */,
@@ -104,6 +107,14 @@
 				B3475E341C8B2BDB0029F255 /* Info.plist */,
 			);
 			path = ReactSwiftExample;
+			sourceTree = "<group>";
+		};
+		B3475E3B1C8B2C2B0029F255 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B3475E391C8B2C270029F255 /* Label.swift */,
+			);
+			name = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,7 +231,7 @@
 				B3475E151C8B1B950029F255 /* Property.swift in Sources */,
 				B3475E171C8B1BE80029F255 /* Component.swift in Sources */,
 				B3475E131C8B1B5D0029F255 /* State.swift in Sources */,
-				B3475E1F1C8B24E10029F255 /* React.swift in Sources */,
+				B3475E1F1C8B24E10029F255 /* Renderer.swift in Sources */,
 				B3475E1B1C8B1E5F0029F255 /* LifeCycle.swift in Sources */,
 				B3475E191C8B1DB90029F255 /* Renderable.swift in Sources */,
 			);
@@ -232,6 +243,7 @@
 			files = (
 				B3475E2B1C8B2BDB0029F255 /* ViewController.swift in Sources */,
 				B3475E291C8B2BDB0029F255 /* AppDelegate.swift in Sources */,
+				B3475E3A1C8B2C270029F255 /* Label.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
