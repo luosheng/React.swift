@@ -15,7 +15,7 @@ struct TimerState: StateType {
 
 struct TimerProperty: PropertyType { }
 
-class TimerLabel: BaseComponent<TimerState, TimerProperty> {
+class TimerLabel: Component<TimerState, TimerProperty> {
     
     var timer: NSTimer?
     

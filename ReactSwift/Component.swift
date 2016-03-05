@@ -8,17 +8,7 @@
 
 import Foundation
 
-protocol Component : Renderable {
-    
-    var delegate: ComponentDelegate? { get set }
-    
-    var hostView: UIView? { get set }
-    
-    var frame: CGRect? { get set }
-    
-}
-
-public class BaseComponent<S: StateType, P: PropertyType> : Component, ComponentDelegate {
+public class Component<S: StateType, P: PropertyType> : Renderable {
     
     private var internalState: S?
     
@@ -55,26 +45,22 @@ public class BaseComponent<S: StateType, P: PropertyType> : Component, Component
     }
     
     private func updateIfNecessary(nextProperty: P?, nextState nextState: S?) {
-        guard let shouldUpdate = delegate?.shouldComponentUpdate(nextProperty: nextProperty, nextState: nextState)
-            where shouldUpdate
-            else {
+        guard shouldComponentUpdate(nextProperty: nextProperty, nextState: nextState) else {
                 return
         }
         
         let previousProperty = property
         let previousState = state
         
-        delegate?.componentWillUpdate(nextProperty: nextProperty, nextState: nextState)
+        componentWillUpdate(nextProperty: nextProperty, nextState: nextState)
         
         internalProperty = nextProperty
         internalState = nextState
         
         renderInHostView()
         
-        delegate?.componentDidUpdate(previousProperty: previousProperty, previousState: previousState)
+        componentDidUpdate(previousProperty: previousProperty, previousState: previousState)
     }
-    
-    public var delegate: ComponentDelegate?
     
     var hostView: UIView?
     
@@ -82,7 +68,6 @@ public class BaseComponent<S: StateType, P: PropertyType> : Component, Component
     
     public init(property: P?) {
         internalProperty = property
-        delegate = self
     }
     
     public func render() -> Renderable? {
@@ -104,9 +89,11 @@ public class BaseComponent<S: StateType, P: PropertyType> : Component, Component
     }
     
     func install() {
-        delegate?.componentWillMount()
+        componentWillMount()
+        
         renderInHostView()
-        delegate?.componentDidMount()
+        
+        componentDidMount()
     }
     
     private func renderInHostView() {
@@ -120,6 +107,8 @@ public class BaseComponent<S: StateType, P: PropertyType> : Component, Component
             view.frame = frame
         }
     }
+    
+    // MARK: - Life cycle
     
     public func componentWillMount() { }
     

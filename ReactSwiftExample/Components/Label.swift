@@ -15,7 +15,7 @@ struct LabelProperty : PropertyType {
     let text: String
 }
 
-class Label : BaseComponent<LabelState, LabelProperty> {
+class Label : Component<LabelState, LabelProperty> {
     
     init(property: LabelProperty) {
         super.init(property: property)

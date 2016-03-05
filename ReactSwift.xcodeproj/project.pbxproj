@@ -12,7 +12,6 @@
 		B3475E151C8B1B950029F255 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3475E141C8B1B950029F255 /* Property.swift */; };
 		B3475E171C8B1BE80029F255 /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3475E161C8B1BE80029F255 /* Component.swift */; };
 		B3475E191C8B1DB90029F255 /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3475E181C8B1DB90029F255 /* Renderable.swift */; };
-		B3475E1B1C8B1E5F0029F255 /* LifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3475E1A1C8B1E5F0029F255 /* LifeCycle.swift */; };
 		B3475E1F1C8B24E10029F255 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3475E1E1C8B24E10029F255 /* Renderer.swift */; };
 		B3475E291C8B2BDB0029F255 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3475E281C8B2BDB0029F255 /* AppDelegate.swift */; };
 		B3475E2B1C8B2BDB0029F255 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3475E2A1C8B2BDB0029F255 /* ViewController.swift */; };
@@ -32,7 +31,6 @@
 		B3475E141C8B1B950029F255 /* Property.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		B3475E161C8B1BE80029F255 /* Component.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
 		B3475E181C8B1DB90029F255 /* Renderable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderable.swift; sourceTree = "<group>"; };
-		B3475E1A1C8B1E5F0029F255 /* LifeCycle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LifeCycle.swift; sourceTree = "<group>"; };
 		B3475E1E1C8B24E10029F255 /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		B3475E261C8B2BDB0029F255 /* ReactSwiftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactSwiftExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3475E281C8B2BDB0029F255 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 				B3475E121C8B1B5D0029F255 /* State.swift */,
 				B3475E141C8B1B950029F255 /* Property.swift */,
 				B3475E181C8B1DB90029F255 /* Renderable.swift */,
-				B3475E1A1C8B1E5F0029F255 /* LifeCycle.swift */,
 				B3475E161C8B1BE80029F255 /* Component.swift */,
 				B3475E1E1C8B24E10029F255 /* Renderer.swift */,
 				B3475E0A1C8B18F40029F255 /* Info.plist */,
@@ -235,7 +232,6 @@
 				B3475E171C8B1BE80029F255 /* Component.swift in Sources */,
 				B3475E131C8B1B5D0029F255 /* State.swift in Sources */,
 				B3475E1F1C8B24E10029F255 /* Renderer.swift in Sources */,
-				B3475E1B1C8B1E5F0029F255 /* LifeCycle.swift in Sources */,
 				B3475E191C8B1DB90029F255 /* Renderable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

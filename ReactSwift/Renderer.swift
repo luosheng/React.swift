@@ -10,7 +10,7 @@ import Foundation
 
 public struct Renderer {
     
-    public static func render<S: StateType, P: PropertyType>(component: BaseComponent<S, P>, hostView: UIView, frame: CGRect) {
+    public static func render<S: StateType, P: PropertyType>(component: Component<S, P>, hostView: UIView, frame: CGRect) {
         component.hostView = hostView
         component.frame = frame
         component.install()
