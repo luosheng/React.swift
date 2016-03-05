@@ -14,8 +14,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let label = Label(property: LabelProperty(text: "Hello world"))
-        Renderer.render(label, hostView: view, frame: CGRect(x: 0, y: 100, width: 300, height: 40))
+//        let label = Label(property: LabelProperty(text: "Hello world"))
+        let timerLabel = TimerLabel()
+        Renderer.render(timerLabel, hostView: view, frame: CGRect(x: 0, y: 100, width: 300, height: 40))
     }
 
 }
