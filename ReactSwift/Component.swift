@@ -42,7 +42,22 @@ public class BaseComponent<S: StateType, P: PropertyType> : Component, Component
         }
     }
     
-    public var property: P?
+    private var internalProperty: P?
+    
+    public var defaultProperty: P? {
+        get {
+            return nil
+        }
+    }
+    
+    public var property: P? {
+        get {
+            return internalProperty ?? defaultProperty
+        }
+        set {
+            internalProperty = newValue
+        }
+    }
     
     public var delegate: ComponentDelegate?
     
