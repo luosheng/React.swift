@@ -33,7 +33,7 @@ public class BaseComponent<S: StateType, P: PropertyType> : Component, Component
             return internalState ?? initialState
         }
         set {
-            internalState = newValue
+            updateIfNecessary(internalProperty, nextState: newValue)
         }
     }
     
@@ -50,8 +50,28 @@ public class BaseComponent<S: StateType, P: PropertyType> : Component, Component
             return internalProperty ?? defaultProperty
         }
         set {
-            internalProperty = newValue
+            updateIfNecessary(newValue, nextState: internalState)
         }
+    }
+    
+    private func updateIfNecessary(nextProperty: P?, nextState nextState: S?) {
+        guard let shouldUpdate = delegate?.shouldComponentUpdate(nextProperty: nextProperty, nextState: nextState)
+            where shouldUpdate
+            else {
+                return
+        }
+        
+        let previousProperty = property
+        let previousState = state
+        
+        delegate?.componentWillUpdate(nextProperty: nextProperty, nextState: nextState)
+        
+        internalProperty = nextProperty
+        internalState = nextState
+        
+        renderInHostView()
+        
+        delegate?.componentDidUpdate(previousProperty: previousProperty, previousState: previousState)
     }
     
     public var delegate: ComponentDelegate?
@@ -61,7 +81,7 @@ public class BaseComponent<S: StateType, P: PropertyType> : Component, Component
     var frame: CGRect?
     
     public init(property: P?) {
-        self.property = property
+        internalProperty = property
         delegate = self
     }
     
