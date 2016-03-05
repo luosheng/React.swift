@@ -7,19 +7,16 @@
 //
 
 import UIKit
+import ReactSwift
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let label = Label(property: LabelProperty(text: "Hello world"))
+        Renderer.render(label, hostView: view, frame: CGRect(x: 0, y: 100, width: 300, height: 40))
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 
