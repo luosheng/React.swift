@@ -34,11 +34,6 @@ public class BaseComponent<S: StateType, P: PropertyType> : Component, Component
         }
         set {
             internalState = newValue
-            if let shouldUpdate = delegate?.shouldComponentUpdate() where shouldUpdate {
-                delegate?.componentWillUpdate()
-                renderInHostView()
-                delegate?.componentDidUpdate()
-            }
         }
     }
     
@@ -110,12 +105,12 @@ public class BaseComponent<S: StateType, P: PropertyType> : Component, Component
     
     public func componentDidMount() { }
     
-    public func shouldComponentUpdate() -> Bool {
+    public func shouldComponentUpdate(nextProperty nextProperty: PropertyType?, nextState: StateType?) -> Bool {
         return true
     }
     
-    public func componentWillUpdate() { }
+    public func componentWillUpdate(nextProperty nextProperty: PropertyType?, nextState: StateType?) { }
     
-    public func componentDidUpdate() { }
+    public func componentDidUpdate(previousProperty previousProperty: PropertyType?, previousState: StateType?) { }
 
 }

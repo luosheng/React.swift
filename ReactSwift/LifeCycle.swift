@@ -14,10 +14,10 @@ public protocol ComponentDelegate {
     
     func componentDidMount()
     
-    func shouldComponentUpdate() -> Bool
+    func shouldComponentUpdate(nextProperty nextProperty: PropertyType?, nextState: StateType?) -> Bool
     
-    func componentWillUpdate()
+    func componentWillUpdate(nextProperty nextProperty: PropertyType?, nextState: StateType?)
     
-    func componentDidUpdate()
+    func componentDidUpdate(previousProperty previousProperty: PropertyType?, previousState: StateType?)
     
 }
