@@ -70,6 +70,10 @@ public class Component<S: StateType, P: PropertyType> : Renderable {
         internalProperty = property
     }
     
+    deinit {
+        unmount()
+    }
+    
     public func render() -> Renderable? {
         return nil
     }
@@ -94,6 +98,18 @@ public class Component<S: StateType, P: PropertyType> : Renderable {
         renderInHostView()
         
         componentDidMount()
+    }
+    
+    func unmount() {
+        guard let view = self.view else {
+            return
+        }
+        
+        componentWillUnmount()
+        
+        view.removeFromSuperview()
+        
+        componentDidUnmount()
     }
     
     private func renderInHostView() {
@@ -121,5 +137,9 @@ public class Component<S: StateType, P: PropertyType> : Renderable {
     public func componentWillUpdate(nextProperty nextProperty: PropertyType?, nextState: StateType?) { }
     
     public func componentDidUpdate(previousProperty previousProperty: PropertyType?, previousState: StateType?) { }
+    
+    public func componentWillUnmount() { }
+    
+    public func componentDidUnmount() { }
 
 }
