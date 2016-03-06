@@ -66,8 +66,11 @@ public class Component<S: StateType, P: PropertyType> : Renderable {
     
     var frame: CGRect?
     
-    public init(property: P?) {
+    let children: [Component]
+    
+    public init(property: P?, children: [Component] = []) {
         internalProperty = property
+        self.children = children
     }
     
     deinit {
