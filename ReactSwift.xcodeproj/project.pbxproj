@@ -41,7 +41,7 @@
 		B3475E321C8B2BDB0029F255 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3475E341C8B2BDB0029F255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3475E391C8B2C270029F255 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Label.swift; path = Components/Label.swift; sourceTree = "<group>"; };
-		B3475E3C1C8B2FE40029F255 /* TimerLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerLabel.swift; sourceTree = "<group>"; };
+		B3475E3C1C8B2FE40029F255 /* TimerLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimerLabel.swift; path = Components/TimerLabel.swift; sourceTree = "<group>"; };
 		B3475E3E1C8BBF060029F255 /* LikeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LikeButton.swift; path = Components/LikeButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
