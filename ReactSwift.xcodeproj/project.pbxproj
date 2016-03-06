@@ -21,6 +21,7 @@
 		B3475E381C8B2BE70029F255 /* ReactSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3475E051C8B18F40029F255 /* ReactSwift.framework */; };
 		B3475E3A1C8B2C270029F255 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3475E391C8B2C270029F255 /* Label.swift */; };
 		B3475E3D1C8B2FE40029F255 /* TimerLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3475E3C1C8B2FE40029F255 /* TimerLabel.swift */; };
+		B3475E3F1C8BBF060029F255 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3475E3E1C8BBF060029F255 /* LikeButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		B3475E341C8B2BDB0029F255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3475E391C8B2C270029F255 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Label.swift; path = Components/Label.swift; sourceTree = "<group>"; };
 		B3475E3C1C8B2FE40029F255 /* TimerLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerLabel.swift; sourceTree = "<group>"; };
+		B3475E3E1C8BBF060029F255 /* LikeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LikeButton.swift; path = Components/LikeButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			children = (
 				B3475E391C8B2C270029F255 /* Label.swift */,
 				B3475E3C1C8B2FE40029F255 /* TimerLabel.swift */,
+				B3475E3E1C8BBF060029F255 /* LikeButton.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				B3475E3D1C8B2FE40029F255 /* TimerLabel.swift in Sources */,
 				B3475E2B1C8B2BDB0029F255 /* ViewController.swift in Sources */,
 				B3475E291C8B2BDB0029F255 /* AppDelegate.swift in Sources */,
+				B3475E3F1C8BBF060029F255 /* LikeButton.swift in Sources */,
 				B3475E3A1C8B2C270029F255 /* Label.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
