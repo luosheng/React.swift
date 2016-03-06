@@ -92,7 +92,7 @@ public class Component<S: StateType, P: PropertyType> : Renderable {
         }
     }
     
-    func install() {
+    func mount() {
         componentWillMount()
         
         renderInHostView()
