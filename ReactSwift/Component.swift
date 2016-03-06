@@ -23,7 +23,7 @@ public class Component<S: StateType, P: PropertyType> : Renderable {
             return internalState ?? initialState
         }
         set {
-            updateIfNecessary(internalProperty, nextState: newValue)
+            updateIfNecessary(nextProperty: internalProperty, nextState: newValue)
         }
     }
     
@@ -40,11 +40,11 @@ public class Component<S: StateType, P: PropertyType> : Renderable {
             return internalProperty ?? defaultProperty
         }
         set {
-            updateIfNecessary(newValue, nextState: internalState)
+            updateIfNecessary(nextProperty: newValue, nextState: internalState)
         }
     }
     
-    private func updateIfNecessary(nextProperty: P?, nextState nextState: S?) {
+    private func updateIfNecessary(nextProperty nextProperty: P?, nextState: S?) {
         guard shouldComponentUpdate(nextProperty: nextProperty, nextState: nextState) else {
                 return
         }
