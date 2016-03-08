@@ -115,12 +115,16 @@ public class Component<S: StateType, P: PropertyType> : Renderable {
         componentDidUnmount()
     }
     
+    private var renderedView: UIView?
+    
     private func renderInHostView() {
+        renderedView?.removeFromSuperview()
+        
         guard let view = self.view else {
             return
         }
         
-        hostView?.subviews.forEach { $0.removeFromSuperview() }
+        renderedView = view
         hostView?.addSubview(view)
         if let frame = frame {
             view.frame = frame
