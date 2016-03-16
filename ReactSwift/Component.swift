@@ -23,11 +23,11 @@ public class Component<S: StateType, P: PropertyType> : Renderable {
             return internalState ?? initialState
         }
         set {
-            updateIfNecessary(nextProperty: internalProperty, nextState: newValue)
+            updateIfNecessary(newValue)
         }
     }
     
-    private var internalProperty: P?
+    private let internalProperty: P?
     
     public var defaultProperty: P? {
         get {
@@ -39,27 +39,23 @@ public class Component<S: StateType, P: PropertyType> : Renderable {
         get {
             return internalProperty ?? defaultProperty
         }
-        set {
-            updateIfNecessary(nextProperty: newValue, nextState: internalState)
-        }
     }
     
-    private func updateIfNecessary(nextProperty nextProperty: P?, nextState: S?) {
-        guard shouldComponentUpdate(nextProperty: nextProperty, nextState: nextState) else {
+    private func updateIfNecessary(nextState: S?) {
+        guard shouldComponentUpdate(nextState) else {
                 return
         }
         
         let previousProperty = property
         let previousState = state
         
-        componentWillUpdate(nextProperty: nextProperty, nextState: nextState)
+        componentWillUpdate(nextState)
         
-        internalProperty = nextProperty
         internalState = nextState
         
         renderInHostView()
         
-        componentDidUpdate(previousProperty: previousProperty, previousState: previousState)
+        componentDidUpdate(previousState)
     }
     
     var hostView: UIView?
@@ -137,13 +133,13 @@ public class Component<S: StateType, P: PropertyType> : Renderable {
     
     public func componentDidMount() { }
     
-    public func shouldComponentUpdate(nextProperty nextProperty: PropertyType?, nextState: StateType?) -> Bool {
+    public func shouldComponentUpdate(nextState: StateType?) -> Bool {
         return true
     }
     
-    public func componentWillUpdate(nextProperty nextProperty: PropertyType?, nextState: StateType?) { }
+    public func componentWillUpdate(nextState: StateType?) { }
     
-    public func componentDidUpdate(previousProperty previousProperty: PropertyType?, previousState: StateType?) { }
+    public func componentDidUpdate(previousState: StateType?) { }
     
     public func componentWillUnmount() { }
     
