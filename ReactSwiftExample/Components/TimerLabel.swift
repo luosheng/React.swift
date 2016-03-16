@@ -18,7 +18,13 @@ struct TimerProperty: PropertyType {
 
     var style: Node? {
         get {
-            return Node(size: CGSize(width: 400, height: 20), selfAlignment: .Center, flex: 1)
+            return Node(
+                size: CGSize(width: 200, height: 20),
+                selfAlignment: .Center,
+                flex: 1,
+                justification: .Center,
+                margin: Edges(uniform: 40)
+            )
         }
     }
     

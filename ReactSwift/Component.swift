@@ -122,8 +122,9 @@ public class Component<S: StateType, P: PropertyType> : Renderable {
         
         renderedView = view
         hostView?.addSubview(view)
-        if let frame = frame {
-            view.frame = frame
+        
+        if let layout = self.property?.style?.layout() {
+            layout.apply(view)
         }
     }
     
