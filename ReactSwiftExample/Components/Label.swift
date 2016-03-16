@@ -8,11 +8,20 @@
 
 import UIKit
 import ReactSwift
+import SwiftBox
 
 struct LabelState : StateType { }
 
 struct LabelProperty : PropertyType {
+    
     let text: String
+    
+    var style: Node? {
+        get {
+            return nil
+        }
+    }
+    
 }
 
 final class Label : Component<LabelState, LabelProperty> {

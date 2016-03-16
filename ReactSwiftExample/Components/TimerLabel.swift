@@ -8,12 +8,21 @@
 
 import UIKit
 import ReactSwift
+import SwiftBox
 
 struct TimerState: StateType {
     let date: NSDate
 }
 
-struct TimerProperty: PropertyType { }
+struct TimerProperty: PropertyType {
+
+    var style: Node? {
+        get {
+            return Node(size: CGSize(width: 400, height: 20), selfAlignment: .Center, flex: 1)
+        }
+    }
+    
+}
 
 final class TimerLabel: Component<TimerState, TimerProperty> {
     

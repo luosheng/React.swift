@@ -8,6 +8,7 @@
 
 import Foundation
 import ReactSwift
+import SwiftBox
 
 struct LikeButtonState : StateType {
     
@@ -16,6 +17,12 @@ struct LikeButtonState : StateType {
 }
 
 struct LikeButtonProperty : PropertyType {
+    
+    var style: Node? {
+        get {
+            return nil
+        }
+    }
     
 }
 

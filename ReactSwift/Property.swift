@@ -7,5 +7,10 @@
 //
 
 import Foundation
+import SwiftBox
 
-public protocol PropertyType { }
+public protocol PropertyType {
+    
+    var style: Node? { get }
+    
+}
