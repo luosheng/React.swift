@@ -3,6 +3,7 @@ language: objective-c
 xcode_project: ReactSwift.xcodeproj
 xcode_scheme: ReactSwift
 osx_image: xcode7.3
- 
+before_install:
+  carthage bootstrap
 script:
 - xctool -project ReactSwift.xcodeproj -scheme ReactSwift clean build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
